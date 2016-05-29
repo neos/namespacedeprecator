@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "neos/namespacedeprecator",
+    "require": {
+        "typo3/flow": "*",
+        "neos/utility-files": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neos\\NamespaceDeprecator\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Neos.NamespaceDeprecator"
+        }
+    }
+}
