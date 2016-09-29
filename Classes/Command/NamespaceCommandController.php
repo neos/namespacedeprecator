@@ -67,14 +67,12 @@ class NamespaceCommandController extends CommandController
         $deprecatedFileContent = str_replace([
             '{{oldNamespace}}',
             '{{newNamespace}}',
-            '{{className}}',
-            '{{newPhpFile}}'
+            '{{className}}'
         ],
             [
                 $oldFileNamespace,
                 $newFileNamespace,
-                $className,
-                $newFileName
+                $className
             ], $this->getDeprecatedFileTemplate());
 
         file_put_contents($oldPhpFile, $deprecatedFileContent);
@@ -89,8 +87,7 @@ class NamespaceCommandController extends CommandController
 namespace {{oldNamespace}};
 
 /*
- * This class namespace was deprecated and moved to {{newNamespace}},
- * find the replacement here: {{newPhpFile}}
+ * This class namespace was deprecated and moved to the new PSR-4 namespace {{newNamespace}}
  */
  
 /**
