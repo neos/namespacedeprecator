@@ -86,7 +86,7 @@ class NamespaceCommandController extends CommandController
     {
         return <<<'EOD'
 <?php
-namespace {{oldNamespace}}
+namespace {{oldNamespace}};
 
 /*
  * This class namespace was deprecated and moved to {{newNamespace}},
